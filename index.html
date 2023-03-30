@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ACA COLOCO EL CDM Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estiloWizard.css">
+    <title>PROYECTO UTN WEB</title>
+</head>
+
+<body id="body">
+    <div class="contenedorPrincipal">
+        <!-- Inicio del div Divisas-->
+        <div id="contenedorDolar">
+            <marquee behavior="scroll" direction="right">
+                <div class="divisa"><img id="iconoDolar" src="imagenes/dollar.png" alt="">
+                    <span id="resultadoNombre"></span> Compra: <span id="resultadoCompra"></span> - Venta: <span
+                        id="resultadoVenta">v</span>-------------<i class="bi bi-whatsapp"> (+54)2616324211</i>
+                </div>
+            </marquee>
+        </div>
+
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <!--  <i class="bi bi-flower1"></i> -->
+                    <span class="tituloLogo1">Negocio</span><span class="tituloLogo2">Digital</span>
+                </a>
+                <!-- boton del menu -->
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- elementos del menu colapsable -->
+
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#body">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#acerca">Acerca</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicios">Servicios</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cotizacion">Cotizacion</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+
+
+                    </ul>
+
+                    <hr class="d-md-none text-white-50">
+
+                    <!-- enlaces redes sociales -->
+
+                    <ul class="navbar-nav  flex-row flex-wrap text-light">
+
+                       <!--  <li class="nav-item col-6 col-md-auto p-3">
+                            <i class="bi bi-twitter"></i>
+                            <small class="d-md-none ms-2">Twitter</small>
+                        </li>
+
+                        <li class="nav-item col-6 col-md-auto p-3">
+                            <i class="bi bi-github"></i>
+                            <small class="d-md-none ms-2">GitHub</small>
+                        </li>
+
+                        <li class="nav-item col-6 col-md-auto p-3">
+                            <i class="bi bi-whatsapp"></i>
+                            <small class="d-md-none ms-2">WhatsApp</small>
+                        </li>
+
+                        <li class="nav-item col-6 col-md-auto p-3">
+                            <i class="bi bi-facebook"></i>
+                            <small class="d-md-none ms-2">Facebook</small>
+                        </li> -->
+                        <!--  ApiClima -->
+                        <li class="nav-item col-6 col-md-auto p-3">
+                            <div class="divisa">
+                                <span id="ubicacionClima"></span>
+                                <img id="icono-animado" src="" alt="" height="50" width="50">
+                                <span id="temperatura-valor"></span>
+                                <span title="Spanish" id="temperatura-descripcion"></span>
+                                <span id="viento-velocidad"></span>
+                            </div>
+
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+        </nav>
+
+        <!--   SECCION CARRUSEL-------- -->
+
+        <section id="carrusel">
+            <div class="contenedorCarrusel">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="imagenes/pc.jpg" class="d-block w-100" alt="..." height="400px">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>REPARACION PC</h2>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes/programacion.jpg" class="d-block w-100" alt="..." height="400px">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>PROGRAMACIÓN</h2>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagenes/camaras.jpg" class="d-block w-100" alt="..." height="400px">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>CAMARAS</h2>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCION ACERCA------------ -->
+
+        <section id="acerca">
+            <div class="container">
+                <h1>ACERCA</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+
+            </div>
+        </section>
+
+        <!-- SECCION SERVICIOS------------ -->
+
+        <section id="servicios">
+            <div class="container">
+                <h1>SERVICIOS</h1>
+                <div class="contenedorTarjeta">
+                    <div class="tarjeta">
+                        <img src="imagenes/ST1.jpg" class="card-img-top" alt="...">
+                        <div class="tarjeta-body">
+                            <h5 class="tarjeta-title">SERVICIO TÉCNICO</h5>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tenetur laudantium quibusdam ab nobis et a ipsam dicta unde autem, ut dolor ipsum magnam! Illo perspiciatis ipsum doloribus blanditiis repudiandae!
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="tarjeta">
+                        <img src="imagenes/P1.jpg" class="card-img-top" alt="...">
+                        <div class="tarjeta-body">
+                            <h5 class="tarjeta-title">PROGRAMACIÓN</h5>
+                            <p class="tarjeta-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tenetur laudantium quibusdam ab nobis et a ipsam dicta unde autem, ut dolor ipsum magnam! Illo perspiciatis ipsum doloribus blanditiis repudiandae!</p>
+
+                        </div>
+                    </div>
+                    <div class="tarjeta">
+                        <img src="imagenes/C1.jpg" class="card-img-top" alt="...">
+                        <div class="tarjeta-body">
+                            <h5 class="tarjeta-title">CÁMARAS CCTV</h5>
+                            <p class="tarjeta-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tenetur laudantium quibusdam ab nobis et a ipsam dicta unde autem, ut dolor ipsum magnam! Illo perspiciatis ipsum doloribus blanditiis repudiandae!</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- SECCION COTIZACION------------ -->
+
+        <section id="cotizacion">
+            
+            <h1>COTIZACÓN </h1>
+            
+            
+            <div class="containerCotizacion">
+
+                <div class="containerWizard">
+                    <h2>Formulario Cotización</h2>
+                    <div class="contendorProgress">
+                        <div class="progress-bar">
+                            <div class="step">
+                                <p>Personal</p>
+                                <div class="bullet">
+                                    <span>1</span>
+                                </div>
+                                <div class="check fas fa-check"></div>
+                            </div>
+                            <div class="step">
+                                <p>Contacto</p>
+                                <div class="bullet">
+                                    <span>2</span>
+                                </div>
+                                <div class="check fas fa-check"></div>
+                            </div>
+                            <div class="step">
+                                <p>Cotizar</p>
+                                <div class="bullet">
+                                    <span>3</span>
+                                </div>
+                                <div class="check fas fa-check"></div>
+                            </div>
+                            <div class="step">
+                                <p>Resumen</p>
+                                <div class="bullet">
+                                    <span>4</span>
+                                </div>
+                                <div class="check fas fa-check"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-outer">
+                        <form action="#" name="fCotizar">
+                            <div class="page slide-page">
+                                <div class="field">
+                                    <div class="label">Nombre</div>
+                                    <input type="text" placeholder="Ingrese Nombre" id="nombre"><span id="errorNombre"
+                                        required></span>
+                                </div>
+                                <div class="field">
+                                    <div class="label">Apellido</div>
+                                    <input type="text" placeholder="Ingrese Apellido" id="apellido"><span
+                                        id="errorApellido"></span>
+                                </div>
+                                <div class="field">
+                                    <div class="label">N° Documento</div>
+                                    <input type="number" placeholder="ingrese Dni" id="dni"><span id="errorDni"></span>
+                                </div>
+                                <div class="field">
+                                    <button class="firstNext next">Siguiente</button>
+                                </div>
+                            </div>
+
+                            <div class="page">
+                                <div class="title">Información de Contacto</div>
+                                <div class="field">
+                                    <div class="label">Correo Electronico</div>
+                                    <input type="mail" placeholder="ingrese mail" id="mail">
+                                </div>
+                                <div class="field">
+                                    <div class="label">Número de Telefono</div>
+                                    <input type="Number" placeholder="ingrese Telefono" id="telefono">
+                                </div>
+                                <div class="field btns">
+                                    <button class="prev-1 prev">Atrás</button>
+                                    <button class="next-1 next">Siguiente</button>
+                                </div>
+                            </div>
+
+                            <div class="page">
+
+                                <div class="field">
+                                    <div class="label">Servicio</div>
+                                    <select id="servicio" onchange="llenarDetalle()">
+                                        <option value="0">Seleccione</option>
+                                        <option value="ServicioTecnico">Servicio Tecnico</option>
+                                        <option value="Programacion">Programacion</option>
+                                        <option value="Camaras">Camaras</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <div class="label">Detalle</div>
+                                    <select id="tipo" name="tipo">
+                                        <option value="">-</option>
+                                    </select>
+                                </div>
+                                <div class="field" id="comentarioField">
+                                    <div class="label">Comentario</div>
+                                    <textarea type="text" id="comentario" rows="8" cols="">
+                                </textarea>
+                                </div>
+                                <div class="field btns">
+                                    <button class="prev-2 prev">Atrás</button>
+                                    <button class="next-2 next">Siguiente</button>
+                                </div>
+                            </div>
+
+                            <div class="page" id="resumenPage">
+                                <div class="title">Resumen</div>
+                                <h4>Nombre: <span id="nombreResumen"></span></h4>
+                                <h4>Apellido: <span id="apellidoResumen"></span></h4>
+                                <h4>Dni: <span id="dniResumen"></span></h4>
+                                <h4>Mail: <span id="mailResumen"></span></h4>
+                                <h4>Telefono: <span id="telefonoResumen"></span></h4>
+                                <h4>Servicio: <span id="servicioResumen"></span></h4>
+                                <h4>Tipo: <span id="tipoResumen"></span></h4>
+                                <h4>Comentario: <span id="comentarioResumen"></span></h4>
+
+
+                                <div class="field btns">
+                                    <button class="prev-3 prev">Atrás</button>
+                                    <button class="submit" onclick="descargarPdf()">Descargar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contacto">
+            <div class="container">
+                <h1>CONTACTO</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus explicabo repellendus
+                architecto nesciunt dolore cupiditate perspiciatis magnam ducimus veniam dolor commodi, repellat
+                consequatur
+                suscipit ab totam fugiat tempore ad!
+
+            </div>
+        </section>
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+            crossorigin="anonymous"></script>
+            
+        <script src="js/ap.js"></script>
+        <script src="js/apiClima.js"></script>
+        <script src="js/apiDivisas.js"></script>
+        <script src="js/formularioWizard.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+        <div class="footer">
+            Footer
+            © 2023 EQUIPO 11-UTN PROGRMACION WEB, Inc.
+            Footer navigation
+            Terms
+            Privacy
+            Security
+            Status
+            Docs
+        </div>
+    </div>
+</body>
+
+</html>
