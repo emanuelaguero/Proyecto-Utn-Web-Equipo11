@@ -15,9 +15,12 @@ h1{
 h2,h3,h4{
   margin: 5px;
 }
+
+
 .contenedorPrincipal{
   background-color: rgb(211, 211, 211);
 }
+
 .tituloLogo1{
   color:white;
   font-size: 28;

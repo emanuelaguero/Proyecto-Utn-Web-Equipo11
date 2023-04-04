@@ -30,7 +30,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <!--  <i class="bi bi-flower1"></i> -->
+
                     <span class="tituloLogo1">Negocio</span><span class="tituloLogo2">Digital</span>
                 </a>
                 <!-- boton del menu -->
@@ -71,7 +71,7 @@
 
                     <ul class="navbar-nav  flex-row flex-wrap text-light">
 
-                       <!--  <li class="nav-item col-6 col-md-auto p-3">
+                        <!--  <li class="nav-item col-6 col-md-auto p-3">
                             <i class="bi bi-twitter"></i>
                             <small class="d-md-none ms-2">Twitter</small>
                         </li>
@@ -215,7 +215,9 @@
                         <div class="tarjeta-body">
                             <h5 class="tarjeta-title">SERVICIO TÉCNICO</h5>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tenetur laudantium quibusdam ab nobis et a ipsam dicta unde autem, ut dolor ipsum magnam! Illo perspiciatis ipsum doloribus blanditiis repudiandae!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tenetur laudantium
+                                quibusdam ab nobis et a ipsam dicta unde autem, ut dolor ipsum magnam! Illo perspiciatis
+                                ipsum doloribus blanditiis repudiandae!
                             </p>
 
                         </div>
@@ -224,7 +226,9 @@
                         <img src="imagenes/P1.jpg" class="card-img-top" alt="...">
                         <div class="tarjeta-body">
                             <h5 class="tarjeta-title">PROGRAMACIÓN</h5>
-                            <p class="tarjeta-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tenetur laudantium quibusdam ab nobis et a ipsam dicta unde autem, ut dolor ipsum magnam! Illo perspiciatis ipsum doloribus blanditiis repudiandae!</p>
+                            <p class="tarjeta-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Consequuntur tenetur laudantium quibusdam ab nobis et a ipsam dicta unde autem, ut dolor
+                                ipsum magnam! Illo perspiciatis ipsum doloribus blanditiis repudiandae!</p>
 
                         </div>
                     </div>
@@ -232,7 +236,9 @@
                         <img src="imagenes/C1.jpg" class="card-img-top" alt="...">
                         <div class="tarjeta-body">
                             <h5 class="tarjeta-title">CÁMARAS CCTV</h5>
-                            <p class="tarjeta-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tenetur laudantium quibusdam ab nobis et a ipsam dicta unde autem, ut dolor ipsum magnam! Illo perspiciatis ipsum doloribus blanditiis repudiandae!</p>
+                            <p class="tarjeta-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Consequuntur tenetur laudantium quibusdam ab nobis et a ipsam dicta unde autem, ut dolor
+                                ipsum magnam! Illo perspiciatis ipsum doloribus blanditiis repudiandae!</p>
 
                         </div>
                     </div>
@@ -245,10 +251,10 @@
         <!-- SECCION COTIZACION------------ -->
 
         <section id="cotizacion">
-            
+
             <h1>COTIZACÓN </h1>
-            
-            
+
+
             <div class="containerCotizacion">
 
                 <div class="containerWizard">
@@ -286,21 +292,21 @@
                         </div>
                     </div>
                     <div class="form-outer">
-                        <form action="#" name="fCotizar">
+                        <form action="#" name="fCotizar" id="fCotizar">
                             <div class="page slide-page">
                                 <div class="field">
+                                    
                                     <div class="label">Nombre</div>
-                                    <input type="text" placeholder="Ingrese Nombre" id="nombre"><span id="errorNombre"
-                                        required></span>
+                                    <input type="text" placeholder="Ingrese Nombre" id="nombre" name="nombre"><span id="errorNombre"></span>
+                                  
                                 </div>
                                 <div class="field">
                                     <div class="label">Apellido</div>
-                                    <input type="text" placeholder="Ingrese Apellido" id="apellido"><span
-                                        id="errorApellido"></span>
+                                    <input type="text" placeholder="Ingrese Apellido" id="apellido" name="apellido"><span id="errorApellido"></span>
                                 </div>
                                 <div class="field">
                                     <div class="label">N° Documento</div>
-                                    <input type="number" placeholder="ingrese Dni" id="dni"><span id="errorDni"></span>
+                                    <input type="number" placeholder="ingrese Dni" id="dni" name="dni"><span id="errorDni"></span>
                                 </div>
                                 <div class="field">
                                     <button class="firstNext next">Siguiente</button>
@@ -311,11 +317,11 @@
                                 <div class="title">Información de Contacto</div>
                                 <div class="field">
                                     <div class="label">Correo Electronico</div>
-                                    <input type="mail" placeholder="ingrese mail" id="mail">
+                                    <input type="mail" placeholder="ingrese mail" id="mail" name="mail"><span id="errorMail"></span>
                                 </div>
                                 <div class="field">
                                     <div class="label">Número de Telefono</div>
-                                    <input type="Number" placeholder="ingrese Telefono" id="telefono">
+                                    <input type="Number" placeholder="ingrese Telefono" id="telefono" name="telefono"><span id="errorTelefono"></span>
                                 </div>
                                 <div class="field btns">
                                     <button class="prev-1 prev">Atrás</button>
@@ -333,15 +339,17 @@
                                         <option value="Programacion">Programacion</option>
                                         <option value="Camaras">Camaras</option>
                                     </select>
+                                    <div><span id="errorServicio"></span></div>
                                 </div>
                                 <div class="field">
                                     <div class="label">Detalle</div>
                                     <select id="tipo" name="tipo">
                                         <option value="">-</option>
                                     </select>
+                                    <div><span id="errorServicioDetalle"></span></div>
                                 </div>
                                 <div class="field" id="comentarioField">
-                                    <div class="label">Comentario</div>
+                                    <div class="label">Comentario</div><span id="errorComentario"></span>
                                     <textarea type="text" id="comentario" rows="8" cols="">
                                 </textarea>
                                 </div>
@@ -422,8 +430,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
             crossorigin="anonymous"></script>
-            
-        <script src="js/ap.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
         <script src="js/apiClima.js"></script>
         <script src="js/apiDivisas.js"></script>
         <script src="js/formularioWizard.js"></script>
