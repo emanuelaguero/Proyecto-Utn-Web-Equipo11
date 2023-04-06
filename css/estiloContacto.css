@@ -1,0 +1,48 @@
+.contenedorContacto {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  width: 100%;    
+}
+
+.containerContacto {
+  text-align: center;
+  border-radius: 5px;
+  padding: 50px 35px 10px 35px;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+#fContacto {
+  text-align: left;
+}
+input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+  height: 50px;
+}
+textarea{
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+
+.labelContacto{
+  margin: 10px 0px;
+}
+
+.itemContacto {
+  border: 1px solid;
+  text-align: left;
+  background-color: aquamarine;
+
+}
+
+#comentarioContacto {}
+
+.cajaContacto {}

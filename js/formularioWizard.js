@@ -19,7 +19,7 @@ jQuery.validator.addMethod("mailSolo", function (value, element) {
     return this.optional(element) || /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(value);
 }, "No es una direccion de mail")
 
-let nombre, apellido, dni, mail, telefono, servicio, tipo, comentario
+let nombre, apellido, dni, mail, telefono, servicio, tipo, comentario,precioServicio
 let banderaNombre, banderaApellido, banderaDni, banderaMail, banderaTelefono, banderaServicio, banderaServicioDetalle, banderaComentario
 nextBtnFirst.addEventListener("click", function (event) {
     event.preventDefault();
@@ -125,7 +125,7 @@ nextBtnSec.addEventListener("click", function (event) {
         progressCheck[current - 1].classList.add("active");
         progressText[current - 1].classList.add("active");
         current += 1;
-        console.log(nombre)
+      
     }
 
 
@@ -168,6 +168,11 @@ nextBtnThird.addEventListener("click", function (event) {
         progressText[current - 1].classList.add("active");
         current += 1;
         
+        //Se llama a la funcion calcular precio
+        precioServicio=calcularPrecioServicio(servicio,tipo)
+        alert(precioServicio)
+       
+
     }
 
 });
@@ -216,14 +221,7 @@ prevBtnFourth.addEventListener("click", function (event) {
 
 });
 
-// prevBtnFourth.addEventListener("click", function(event){
-//   event.preventDefault();
-//   slidePage.style.marginLeft = "-50%";
-//   bullet[current - 2].classList.remove("active");
-//   progressCheck[current - 2].classList.remove("active");
-//   progressText[current - 2].classList.remove("active");
-//   current -= 1;
-//
+
 
 let option
 
@@ -231,9 +229,9 @@ let option
 
 
 
-s_ServicioTecnico = ["-", "Servicio Tecnico 1", "Servicio Tecnico 2", "Servicio Tecnico 3", "Servicio Tecnico 4"]
-s_Programacion = ["-", "Programacion 1", "Programacion 2", "Programacion 3"]
-s_Camaras = ["-", "camaras 1", "camaras 2", "camaras 3"]
+s_ServicioTecnico = ["-", "Soporte Basico", "Soporte Medio", "Soporte Alto"]
+s_Programacion = ["-", "Diseño", "Diseño+Programacion", "Diseño+Programacion+Administracion"]
+s_Camaras = ["-", "Instalación", "Insta+Mantenimiento", "Inst+Manten+Administracion"]
 
 let resultado
 const llenarDetalle = () => {
@@ -257,14 +255,43 @@ const llenarDetalle = () => {
     }
 
 }
+//Funcion calcular Precio servicio
+const calcularPrecioServicio=(servicio,tipo)=>{
+    alert("entro")
+if(servicio==="ServicioTecnico"){
+    if(tipo==="Soporte Basico"){
+        return 5000
+    }else if(tipo==="Soporte Medio"){
+        return 10000
+    }else{
+        return 15000
+    }
+}
 
-
-
+if(servicio==="Programacion"){
+    if(tipo==="Diseño"){
+        return 30000
+    }else if(tipo==="Diseño+Programacion"){
+        return 50000
+    }else{
+        return 80000
+    }
+}
+if(servicio==="Camaras"){
+    if(tipo==="Instalación"){
+        return 20000
+    }else if(tipo==="Insta+Mantenimiento"){
+        return 40000
+    }else{
+        return 60000
+    }
+}
+}
 
 
 
 const descargarPdf = () => {
-
+    
     /* FUNCION REALIZAR DESCARGA DEL PDF */
 
     var doc = new jsPDF("p", "mm", "a4")
@@ -290,12 +317,12 @@ const descargarPdf = () => {
     doc.text("TIPO: " + tipo, 10, 80)
     doc.text(comentarioFormat, 10, 85)
     doc.line(10, 170, 200, 170)
-    doc.text("PRECIO: " + "40000", 120, 180)
+    doc.text("PRECIO EN PESOS: " + precioServicio, 120, 180)
 
     /* TOMO EL VALOR DEL LOCALSTORAGE */
     const ventaDolar = localStorage.getItem('ventaDolar')
 
-    doc.text("DOLAR: " + parseFloat(ventaDolar) * 40000, 160, 180)
+    doc.text(" PRECIO EN DOLAR: " + (precioServicio/parseFloat(ventaDolar)).toFixed(2), 160, 180)
     doc.save("Cotizacion.pdf")
 
 }

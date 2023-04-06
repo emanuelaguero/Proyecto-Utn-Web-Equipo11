@@ -215,8 +215,10 @@ form .page .btns button.next{
 }
 #errorNombre,#errorApellido,#errorDni,#errorMail,#errorTelefono,#errorServicio,#errorServicioDetalle{
   margin-left: 4px;
-  color:red
-  
-
+  color:red 
 }
+
+
+
+
 
