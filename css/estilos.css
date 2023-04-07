@@ -59,7 +59,9 @@ h1 {
   width: 25px;
   margin-bottom: 5px;
 }
-
+#whatsApp{
+  color: white;
+}
 #contenedorDolar {
   background-color: rgb(91, 3, 15);
   height: 25px;
@@ -77,7 +79,7 @@ h1 {
   background-color: rgb(0, 0, 0);
   text-align: center;
   color: white;
-  height: 50px;
+  height: 10%;
   padding: 10px;
   opacity: 90%;
 
@@ -142,7 +144,7 @@ strong{
 .accordion-header{
   background-color: rgb(218, 138, 34);
 }
-#panelsStayOpen-headingOne{
+#panelsStayOpen-headingOne,#panelsStayOpen-headingTwo{
 
 --bs-accordion-active-bg:antiquewhite;
 }
