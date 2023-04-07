@@ -1,30 +1,73 @@
-$(document).ready(()=>{
+$(document).ready(() => {
     $("#fContacto").validate({
         debug: false,
         rules: {
-            contactoNombre: {
+            nombreContacto: {
                 required: true,
-                minlength: 3
-            } },
-        messages: {
-            contactoNombre: {
-                required: "true",
-                minlength: "Name should be at least 3 characters"
-            }},
-        submitHandler: function (form) {
-            alert("Creacion");
+               
+            },
+            emailContacto: {
+                required: true,
+                email:true
+            },
+            dniContacto: {
+                required: true,
+                minlength: 7,
+                maxlength: 8
+            },
+            asuntoContacto: {
+                required: true,
+                
+            },
+            comentarioContacto: {
+                required: true,
+              
             }
+        },
+        messages: {
+            nombreContacto: {
+                required: "Campo Requerido",
+            },
+            emailContacto: {
+                required: "Campo Requerido",
+                email: "Direccion de Mail Invalido"
+            },
+            dniContacto: {
+                required: "Campo Requerido",
+                minlength: "El DNI tiene de 7 o 8 caracteres",
+                maxlength:"El DNI tiene de 7 o 8 caracteres"
+            },
+            asuntoContacto: {
+                required: "Campo Requerido",
+                
+            },
+            comentarioContacto: {
+                required: "Campo Requerido",
+              
+            }
+        },
+       
+        submitHandler: function (form, e) {
+            e.preventDefault()
+            setTimeout(() => {
+                $(".alert").toggleClass('in show')
+            }, 300);
+            setTimeout(() => {
+                $(".alert").hide()
+            }, 800);
+            
+        }
 
 
-        
+
     })
 
-   /*  $("#fContacto").submit(()=>{
-
-    
-    setTimeout(function () {
-        alert("Your Form Successfully Signed up");
-         location.reload();
-        }, 800);
-    }) */
+    /*  $("#fContacto").submit(()=>{
+ 
+     
+     setTimeout(function () {
+         alert("Your Form Successfully Signed up");
+          location.reload();
+         }, 800);
+     }) */
 })

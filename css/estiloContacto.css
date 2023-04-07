@@ -30,6 +30,7 @@ textarea{
   border-radius: 5px;
   padding-left: 15px;
   font-size: 18px;
+  width: 100%;
 }
 
 .labelContacto{
@@ -37,12 +38,52 @@ textarea{
 }
 
 .itemContacto {
-  border: 1px solid;
+  border-radius: 5px;
   text-align: left;
-  background-color: aquamarine;
+  margin: 20px;
+  opacity: 90%;
+}
+i{
+  color: #990202;
+  margin-right: 10px;
+}
+#btnEnviarFormularioContacto{
+width: 100%;
+height: 40px;
+border: none;
+background: #990202;
+margin-top: 20px;
+border-radius: 5px;
+color: #fff;
+cursor: pointer;
+font-size: 18px;
+letter-spacing: 1px;
+text-transform: uppercase;
+transition: 0.5s ease;
+}
+
+#btnEnviarFormularioContacto:hover{
+  color: #333;
+}
+
+#contacto{
+padding-bottom: 50px;
+}
+
+input.error,textarea.error {
+  color: red;
+  border-color: red;
+  border: 2px solid;
 
 }
 
-#comentarioContacto {}
+.error {
+  color: red;
+  
+}
+.alert{
+  margin-top: 10px;
+}
 
-.cajaContacto {}
+
+
