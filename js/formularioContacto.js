@@ -5,6 +5,7 @@ $(document).ready(() => {
             nombreContacto: {
                 required: true,
                
+               
             },
             emailContacto: {
                 required: true,
@@ -21,24 +22,27 @@ $(document).ready(() => {
             },
             comentarioContacto: {
                 required: true,
+               
               
             }
         },
         messages: {
             nombreContacto: {
                 required: "Campo Requerido",
+                
             },
             emailContacto: {
                 required: "Campo Requerido",
-                email: "Direccion de Mail Invalido"
+                email: "Direccion de Mail Invalido",
             },
             dniContacto: {
                 required: "Campo Requerido",
                 minlength: "El DNI tiene de 7 o 8 caracteres",
-                maxlength:"El DNI tiene de 7 o 8 caracteres"
+                maxlength:"El DNI tiene de 7 o 8 caracteres",
             },
             asuntoContacto: {
                 required: "Campo Requerido",
+               
                 
             },
             comentarioContacto: {
@@ -53,8 +57,8 @@ $(document).ready(() => {
                 $(".alert").toggleClass('in show')
             }, 300);
             setTimeout(() => {
-                $(".alert").hide()
-            }, 800);
+                $(".alert").hide(2500)
+            }, 2000);
             
         }
 

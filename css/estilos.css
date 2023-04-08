@@ -141,13 +141,8 @@ strong{
   background-color:brown;
   color: antiquewhite;
 }
-.accordion-header{
-  background-color: rgb(218, 138, 34);
-}
-#panelsStayOpen-headingOne,#panelsStayOpen-headingTwo{
 
---bs-accordion-active-bg:antiquewhite;
-}
+
 
 /* Servicios*/
 #contenedorServicios {
