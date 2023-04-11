@@ -23,7 +23,9 @@ h4 {
   text-align: center;
 }
 
-
+img{
+  object-fit: cover;
+}
 .contenedorPrincipal {
   background-color: rgb(211, 211, 211);
   text-align: center;
@@ -76,13 +78,18 @@ h1 {
 }
 
 .footer {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(34, 34, 34);
   text-align: center;
   color: white;
-  height: 10%;
+  height: 2%;
   padding: 10px;
   opacity: 90%;
 
+}
+#refIconoFooter{
+  color:aliceblue;
+  cursor: pointer;
+  
 }
 
 /* Carrusel*/
@@ -105,7 +112,7 @@ text-align: center;
   background-color: rgb(186, 182, 182);
   padding: 20px;
   margin: 20px;
-  border-radius: 20px;
+ 
 }
 
 #contenedorStaff {

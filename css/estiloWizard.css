@@ -20,7 +20,7 @@
   width: 530px;
   text-align: center;
   border-radius: 5px;
-  padding: 50px 35px 10px 35px;
+  padding: 55px 35px 10px 55px;
   background-color: #8EC5FC;
   background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
   
@@ -30,6 +30,7 @@
 .containerWizard:hover{
   box-shadow: 0 16px 18px rgb(0,0,0,0.2);
   transition: all 0.25s;
+
 }
 
 .containerWizard header{
@@ -84,7 +85,7 @@ form .page .field select{
 }
 form .page .field button{
   width: 100%;
-  height: calc(100% + 5px);
+  height: 40px;
   border: none;
   background: #990202;
   margin-top: -20px;
@@ -156,9 +157,9 @@ form .page .btns button.next{
   position: absolute;
   content: '';
   bottom: 11px;
-  right: -93px;
+  right: -88px;
   height: 3px;
-  width: 92px;
+  width: 88px;
   background: #262626;
 }
 .progress-bar .step .bullet.active:after{
