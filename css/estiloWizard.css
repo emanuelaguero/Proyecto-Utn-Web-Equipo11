@@ -205,12 +205,20 @@ form .page .btns button.next{
 }
 
 #resumenPage{
-  justify-content:center;
+
   text-align: justify;
+}
+#resumenPageAlinear{
  
+  padding-left:3%;
+  padding-right: 8%;
+}
+h4{
+  text-align: justify;
 }
 
 .title{
+  padding-left: 25%;
   font-weight: bold;
   text-decoration: underline;
 }

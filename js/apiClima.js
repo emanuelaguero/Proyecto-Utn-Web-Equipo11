@@ -79,7 +79,7 @@ window.addEventListener('load', () => {
               iconoAnimado.src = 'animated/cloudy-day-1.svg'
               console.log('NUBES','DIA');
               }else{
-                iconoAnimado.src = 'animated/cloudy-nigth-1.svg'
+                iconoAnimado.src = 'animated/cloudy-night-1.svg'
                 console.log('NUBES');
               }
               break;
@@ -88,7 +88,7 @@ window.addEventListener('load', () => {
                 iconoAnimado.src = 'animated/cloudy-day-1.svg'
                   console.log('por defecto');
                 }else{
-                  iconoAnimado.src = 'animated/cloudy-nigth-1.svg'
+                  iconoAnimado.src = 'animated/cloudy-night-1.svg'
                   console.log('por defecto');
                 }
                 break;
