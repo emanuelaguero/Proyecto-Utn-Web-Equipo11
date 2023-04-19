@@ -183,6 +183,9 @@ strong{
   text-align: center;
   transition: all 0.25s;
   background-color: aliceblue;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 7px;
 }
 
 .tarjeta-title {
@@ -193,6 +196,8 @@ strong{
   transform: translate(-15px);
   box-shadow: 0 12px 16px rgb(0, 0, 0, 0.2);
 }
+
+
 
 
 
