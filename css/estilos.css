@@ -12,7 +12,6 @@ body {
 
 }
 #navPrincipal{
-  position: fixed;
   width: 100%;
   z-index: 10;
 }
@@ -72,6 +71,7 @@ h1 {
   background-color: rgb(91, 3, 15);
   height: 25px;
   color: white;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .divisa {
@@ -175,7 +175,7 @@ strong{
 
 .tarjeta {
   width: 330px;
-  height: 400px;
+  height: 430px;
   border-radius: 8px;
   box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
   overflow: hidden;
@@ -186,8 +186,13 @@ strong{
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 7px;
+  padding-top: 10px;
 }
-
+.card-img-top{
+  width: 300px;
+  height: 200px;
+  border-radius: 6px;
+}
 .tarjeta-title {
   padding: 5px;
 }
@@ -196,6 +201,17 @@ strong{
   transform: translate(-15px);
   box-shadow: 0 12px 16px rgb(0, 0, 0, 0.2);
 }
+
+.ico__form{
+  text-decoration: none;
+  color: black;
+}
+
+.ico__form:hover{
+  color: #506ee5
+}
+
+
 
 
 

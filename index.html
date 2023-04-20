@@ -30,7 +30,7 @@
             </marquee>
         </div>
 
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="encabezadoP">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
 
@@ -48,11 +48,11 @@
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#body">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="#acerca">Acerca</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#acerca">Acerca</a>
-                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#"></a>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="#equipo">Equipo</a>
                         </li>
@@ -196,7 +196,7 @@
         <section id="equipo">
             <div class="container">
                 <div id="titulo">
-                    <h1>Equipo</h1>
+                    <h1>EQUIPO</h1>
                 </div>
                 <div class="row ">
                     <div class="col-xl-3 col-lg-3 col-md-6 col-xs-12" id="contenedorStaff">
@@ -310,8 +310,7 @@
                                     Hacemos un diagnóstico general de funcionamiento de forma casi instantánea para
                                     solucionar problemas.
                                     En nuestro laboratorio se realizan revisión, limpieza de software, cambios de
-                                    compomentes de Hardware
-
+                                    compomentes de Hardware.
                                 </p>
 
                             </div>
@@ -327,7 +326,7 @@
                                     programacion de paginas web, en diferentes leguajes de programacion
                                     HTML
                                     CSS
-                                    JAVASCRIPT
+                                    JAVASCRIPT.
                                 </p>
 
                             </div>
@@ -354,7 +353,7 @@
         <section id="cotizacion">
             <div class="container">
             <div id="titulo">
-                <h1>COTIZACÓN </h1>
+                <h1>COTIZACIÓN</h1>
             </div>
             <div class="containerCotizacion">
                 <div class="containerWizard">
@@ -508,22 +507,26 @@
                                     <i class="bi bi-house-door-fill"></i>
                                     Av. Bandera de los Andes 1050, Mendoza, Argentina
                                 </div>
-                                <div class="itemContacto">
+
+                                <a href="https://web.whatsapp.com/%F0%9F%8C%90/es" class="ico__form" target="_blank"><div class="itemContacto">
                                     <i class="bi bi-whatsapp"></i>
                                     (+54)2616324XXX
-                                </div>
-                                <div class="itemContacto">
+                                </div></a>
+
+                                <a href="https://www.facebook.com" class="ico__form" target="_blank"><div class="itemContacto">
                                     <i class="bi bi-facebook"></i>
                                     NegocioDigital
-                                </div>
-                                <div class="itemContacto">
+                                </div></a>
+
+                                <a href="https://twitter.com/?lang=es" class="ico__form" target="_blank"><div class="itemContacto">
                                     <i class="bi bi-twitter"></i>
                                     @NegocioDigital
-                                </div>
-                                <div class="itemContacto">
+                                </div></a>
+
+                                <a href="https://www.instagram.com" class="ico__form" target="_blank"><div class="itemContacto">
                                     <i class="bi bi-instagram"></i>
                                     Negocio Digital
-                                </div>
+                                </div></a>
                             </div>
                         </div>
                     </div>
@@ -556,7 +559,7 @@
                                 <input type="text" placeholder="Ingrese Asunto" id="asuntoContacto"
                                     name="asuntoContacto"><span id="errorDni"></span>
                                 <div class="labelContacto">Comentario</div><span id="errorComentario"></span>
-                                <textarea type="text" id="comentarioContacto" name="comentarioContacto" rows="4"
+                                <textarea type="text" placeholder="Ingrese un Comentario" id="comentarioContacto" name="comentarioContacto" rows="4"
                                     cols=""></textarea>
                                 <div class="labelContacto">
                                     <button type="submit" class="" id="btnEnviarFormularioContacto">Enviar</button>
@@ -611,6 +614,6 @@
     <script src="js/formularioWizard.js"></script>
     <script src="js/formularioContacto.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="js/navTransparente.js"></script>
 </body>
-
 </html>
