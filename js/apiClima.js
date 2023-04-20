@@ -2,10 +2,6 @@ window.addEventListener('load', () => {
   let lon, lat, keyApi
   let iconoAnimado = document.getElementById('icono-animado')
 
-
-
-
-
   if (navigator.geolocation) {
     /* saco las coordenadas */
     navigator.geolocation.getCurrentPosition(posicion => {
@@ -27,15 +23,15 @@ window.addEventListener('load', () => {
           let datos = JSON.parse(this.responseText);
           let temperatura = Math.round(datos.main.temp) / 10 + "°C"
           let descripcionTemperatura = datos.weather[0].description
-          let tipo = datos.weather[0].main
           let velocidadViento = datos.wind.speed + "m/s"
+          let tipo = datos.weather[0].main
           let ubicacionClima = datos.name
       
-          
-          const esDia=()=>{
-            let date=new Date()
-            let hora= date.getHours()
-            if(hora>6 && hora<20){
+          //funcion Dia detro del rango toma valor 
+          const esDiaBandera=()=>{
+            let diaActual=new Date()
+            let horaActual= diaActual.getHours()
+            if(horaActual>7 && horaActual<20){
               return true
             }else{
               return false
@@ -44,7 +40,7 @@ window.addEventListener('load', () => {
           }
           switch (tipo) {
 
-            case 'Thunderstorm':
+            case 'Rain':
               iconoAnimado.src = 'animated/thunder.svg'
               console.log('TORMENTA');
               break;
@@ -52,7 +48,7 @@ window.addEventListener('load', () => {
               iconoAnimado.src = 'animated/rainy-2.svg'
               console.log('LLOVIZNA');
               break;
-            case 'Rain':
+            case 'Thunderstorm':
               iconoAnimado.src = 'animated/rainy-7.svg'
               console.log('LLUVIA');
               break;
@@ -61,7 +57,7 @@ window.addEventListener('load', () => {
               console.log('NIEVE');
               break;
             case 'Clear':
-              if(esDia()){
+              if(esDiaBandera()){
                 iconoAnimado.src = 'animated/day.svg'
                 console.log('LIMPIO','DIA');
               }else{
@@ -75,7 +71,7 @@ window.addEventListener('load', () => {
               console.log('ATMOSFERA');
               break;
             case 'Clouds':
-              if(esDia()){
+              if(esDiaBandera()){
               iconoAnimado.src = 'animated/cloudy-day-1.svg'
               console.log('NUBES','DIA');
               }else{
@@ -84,7 +80,7 @@ window.addEventListener('load', () => {
               }
               break;
             default:
-              if(esDia()){
+              if(esDiaBandera()){
                 iconoAnimado.src = 'animated/cloudy-day-1.svg'
                   console.log('por defecto');
                 }else{
@@ -95,15 +91,15 @@ window.addEventListener('load', () => {
               
           }
 
-
-          document.getElementById('viento-velocidad').innerHTML = velocidadViento
           document.getElementById('ubicacionClima').innerHTML = ubicacionClima
+          document.getElementById('viento-velocidad').innerHTML = velocidadViento
           document.getElementById('temperatura-valor').innerHTML = temperatura
           document.getElementById('temperatura-descripcion').innerHTML = descripcionTemperatura.toUpperCase()
-          // document.getElementById('temperatura-descripcion').innerHTML = tipo.toUpperCase()
-
-
-        }
+        
+        }/* else{
+          validacion no se coloco porque no se coloca la key de api privada
+          alert("ERROR de Conexion API")
+        } */
       }
     })
 
